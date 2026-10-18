@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>STEM Made Simple | Learn STEM</title>
+        <meta
+            name="description"
+            content="Explore coding, science, and math with clear explanations and interactive quizzes."
+        >
+
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+
+        <!-- Header and navigation-->
+         <header class="site-header">
+            <a class="logo" href="#home" aria-label="STEM Made Simple home">
+                <span class="logo-icon" aria-hidden="true">✳</span>
+                <span>STEM Made Simple</span>
+            </a>
+
+            <div class="header-actions">
+                    <nav class="main-nav" aria-label="Main navigation">
+                        <a href="#topics">Learn</a>
+                        <a href="#progress">My Progress</a>
+                    </nav>
+
+                    <button
+                        class="theme-toggle"
+                        id="theme-toggle"
+                        type="button"
+                        aria-label="Switch to soft dark theme"
+                        aria-pressed="false"
+                    >
+                        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                        <span class="theme-toggle-label">Dark mode</span>
+                    </button>
+                </div>
+         </header>
+
+         <main>
+            <div id="home-screen" class="screen">
+
+                <!-- Homepage hero section-->
+                <section class="hero" id="home">
+                    <p class="eyebrow">YOUR STEM JOURNEY STARTS HERE</p>
+
+                    <h1>Big ideas. Clear explanations.</h1>
+
+                    <p class="hero-description">
+                        Understand STEM concepts one step at a time.
+                    </p>
+
+                    <a class="primary-button" href="#topics">
+                        Explore topics <span aria-hidden="true">→</span>
+                    </a>
+                </section>
+
+                <!-- STEM topic cards-->
+                <section class="topics-section" id="topics">
+                    <div class="section-heading">
+                        <h2>What do you want to learn?</h2>
+                        <p>Choose a topic to start exploring.</p>
+                    </div>
+
+                    <div class="topic-grid">
+
+                        <!-- coding card -->
+                        <article class="topic-card coding-card">
+                            <div class="topic-icon coding icon" aria-hidden="true">
+                                &lt;/&gt;
+                            </div>
+
+                            <h3>Coding</h3>
+                            <p>Loops &amp; logic</p>
+
+                            <a class="topic-link" href="#lesson" data-topic="coding">
+                                Explore coding <span aria-hidden="true">→</span>
+                            </a>
+                        </article>
+
+                        <!-- science card -->
+                        <article class="topic-card science-card">
+                            <div class="topic-icon science-icon" aria-hidden="true">
+                                ⚡
+                            </div>
+
+                            <h3>Science</h3>
+                            <p>Discover electricity</p>
+
+                            <a class="topic-link" href="#lesson" data-topic="electricity">
+                                Explore Science <span aria-hidden="true">→</span>
+                            </a>
+                        </article>
+
+                        <!-- math card -->
+                        <article class="topic-card math-card">
+                            <div class="topic-icon math-icon" aria-hidden="true">
+                                🔢
+                            </div>
+
+                            <h3>Math</h3>
+                            <p>Understand fractions</p>
+
+                            <a class="topic-link" href="#lesson" data-topic="math">
+                                Explore math <span aria-hidden="true">→</span>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- LESSON SCREEN - hidden until a topic is selected-->
+            <section id="lesson" class="screen lesson-screen" hidden>
+
+            <div class="lesson-content">
+
+                <!-- breadcrumb navigation -->
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="#home" data-screen="home">Learn</a>
+                        <span aria-hidden="true">/</span>
+                        <span id="lesson-breadcrumb-subject">Coding</span>
+                        <span aria-hidden="true">/</span>
+                        <span id ="lesson-breadcrumb-title">Loops &amp; conditionals</span>
+                    </nav>
+
+
+                    <!-- Lesson progress -->
+                    <div class="lesson-progress">
+                        <span>Step 1 of 3</span>
+
+                        <div class="progress-track"
+                            role="progressbar"
+                            aria-label="Lesson progress"
+                            aria-valuemin="0"
+                            aria-valuemax="3"
+                            aria-valuenow="1">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+
+                    <!-- Lesson intro -->
+                    <header class="lesson-heading">
+                        <p class="eyebrow" id="lesson-eyebrow">CODING FUNDAMENTALS</p>
+                        <h1 id="lesson-title">Teach your code to think.</h1>
+                        <p id="lesson-intro">
+                            Programs can repeat actions and make decisions based on what happens.
+                        </p>
+                    </header>
+
+                    <!-- Lesson concepts -->
+                    <div class="lesson-grid" id="lesson-grid">
+
+                        <article class="lesson-card">
+                            <div class="lesson-number" aria-hidden="true">01</div>
+                            <h2>Loops</h2>
+                            <p>
+                                Repeat instructions instead of writing them
+                                over and over.
+                            </p>
+
+                            <div class="code-example">
+                                <span class="code-label">EXAMPLE</span>
+                                <code>REPEAT 4 TIMES</code>
+                                <pre><code>  move_forward()</code></pre>
+                            </div>
+                        </article>
+
+                        <article class="lesson-card">
+                            <div class="lesson-number" aria-hidden="true">02</div>
+                            <h2>Conditionals</h2>
+                            <p>
+                                Choose what to do based on whether something
+                                is true.
+                            </p>
+
+                            <div class="code-example">
+                                <span class="code-label">EXAMPLE</span>
+                                <code>IF obstacle_ahead</code>
+                                <pre><code>  turn_right()</code></pre>
+                            </div>
+                        </article>
+                    </div>   
+                    
+                    <!-- Everyday analogy -->
+                    <aside class="lesson-tip">
+                        <span class="tip-icon" aria-hidden="true">✦</span>
+                        <div>
+                            <h2 lesson-tip-heading id="lesson-tip-heading">Think about it this way</h2>
+                            <p id="lesson-tip-text">
+                                A loop is like replaying your favorite song. 
+                                A conditional is like taking an umbrella if it rains.
+                            </p>
+                        </div>
+                    </aside> 
+
+                    <section class="lesson-sources" aria-labelledby="sources-heading">
+                        <h2 id="sources-heading">Explore the sources</h2>
+                        <p>Learn more from these educational sources</p>
+                        <ul id="lesson-source-list"></ul>
+                    </section>
+
+                    <!-- Continue to quiz -->
+                    <div class="lesson-actions">
+                        <button type="button" class="primary-button" id="try-quiz">
+                            Try it <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+            
+            <!-- Quiz screen: hidden until the learner clicks "Try it" -->
+            <section id="quiz-screen" class="screen quiz-screen" hidden>
+                <div class="quiz-content">
+
+                    <!-- Breadcrumb navigation -->
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="#home" data-screen="home">Learn</a>
+                        <span aria-hidden="true">/</span>
+                        <span id="quiz-breadcrumb-subject">Coding</span>
+                        <span aria-hidden="true">/</span>
+                        <span id="quiz-breadcrumb-title">Loops &amp; conditionals</span>
+                    </nav>
+
+                    <!-- Quiz progress -->
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-labels">
+                            <span class="eyebrow">QUICK KNOWLEDGE CHECK</span>
+                            <span id="question-count">Question 1 of 3</span>
+                        </div>
+
+                        <div
+                            class="progress-track"
+                            role="progressbar"
+                            aria-label="Quiz progress"
+                            aria-valuemin="0"
+                            aria-valuemax="3"
+                            aria-valuenow="1"
+                            id="quiz-progress-bar"
+                        >
+                            <div class="progress-fill" id="quiz-progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question heading -->
+                    <header class="quiz-heading">
+                        <h1>Let's see what you've learned.</h1>
+                        <p id="quiz-instructions">
+                            Choose the best answer below.
+                        </p>
+                    </header>
+
+                    <!-- Question and answer choices -->
+                    <div class="quiz-card">
+                        <form id="quiz-form">
+
+                            <fieldset class="answer-group">
+                                <legend id="quiz-question">
+                                    A robot needs to move forward five times.
+                                    Which instruction would be best?
+                                </legend>
+
+                                <div class="answer-options">
+
+                                    <label class="answer-option">
+                                        <input
+                                            type="radio"
+                                            name="quiz-answer"
+                                            value="A"
+                                        />
+                                        <span class="answer-letter">A</span>
+                                        <span class="answer-text">
+                                            Write the move-forward command five times.
+                                        </span>
+                                    </label>
+
+                                    <label class="answer-option">
+                                        <input
+                                            type="radio"
+                                            name="quiz-answer"
+                                            value="B"
+                                        />
+                                        <span class="answer-letter">B</span>
+                                        <span class="answer-text">
+                                            Use a loop that repeats five times.
+                                        </span>
+                                    </label>
+
+                                    <label class="answer-option">
+                                        <input
+                                            type="radio"
+                                            name="quiz-answer"
+                                            value="C"
+                                        />
+                                        <span class="answer-letter">C</span>
+                                        <span class="answer-text">
+                                            Use a conditional without checking a condition.
+                                        </span>
+                                    </label>
+
+                                </div>
+                            </fieldset>
+
+                            <!-- Feedback will appear here after checking the answer -->
+                            <div
+                                id="quiz-feedback"
+                                class="quiz-feedback"
+                                role="status"
+                                aria-live="polite"
+                                hidden
+                            ></div>
+
+                            <!-- Quiz action -->
+                            <div class="quiz-actions">
+                                <button
+                                    type="submit"
+                                    class="primary-button"
+                                    id="check-answer"
+                                >
+                                    Check answer <span aria-hidden="true">→</span>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Completion Screen -->
+            <section id="completion-screen" class="screen completion-screen" hidden>
+                <div class="completion-content">
+
+                    <!-- Success icon -->
+                    <div class="completion-icon" aria-hidden="true">
+                        ✓
+                    </div>
+
+                    <!-- Completion message -->
+                    <p class="eyebrow">LEARNING PROGRESS</p>
+
+                    <h1 id="completion-title">Concept unlocked!</h1>
+
+                    <p id="completion-description" class="completion-description">
+                        You completed the lesson!
+                    </p>
+
+                    <!-- Score -->
+                    <div class="completion-score">
+                        <p class="score-label">YOUR QUIZ SCORE</p>
+
+                        <p class="score-value">
+                            <span id="final-score">0</span>
+                            <span class="score-divider">/</span>
+                            <span id="total-questions">3</span>
+                        </p>
+                        <p id="completion-message" class="completion-message">
+                            Keep practicing. You're building your skills!
+                        </p>
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="completion-progress">
+                        <div class="completion-progress-labels">
+                            <span>Lesson progress</span>
+                            <span id="completion-percentage">0%</span>
+                        </div>
+
+                        <div
+                            class="progress-track"
+                            role="progressbar"
+                            aria-label="Lesson completion"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="0"
+                            id="completion-progress-bar"
+                        >
+                            <div
+                                class="progress-fill"
+                                id="completion-progress-fill"
+                            ></div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="completion-actions">
+                        <button
+                            type="button"
+                            class="primary-button"
+                            id="explore-another-topic"
+                        >
+                            Explore another topic
+                            <span aria-hidden="true">→</span>
+                        </button>
+
+                        <button
+                            type="button"
+                            class="secondary-button"
+                            id="review-lesson"
+                        >
+                            Review this lesson
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            
+            <!-- My Progress screen -->
+            <div id="progress-screen" class="screen" hidden>
+                <section class="progress-page">
+                    <p class="eyebrow">YOUR STEM JOURNEY</p>
+                    <h1>My Progress</h1>
+                    <p class="progress-intro">
+                        Every step counts. See what you've learned and keep building your skills.
+                    </p>
+
+                    <div class="progress-overview">
+                        <div class="progress-stat">
+                            <span class="progress-stat-label">Topics completed</span>
+                            <strong id="topics-completed">0 of 3</strong>
+                        </div>
+
+                        <div class="progress-stat">
+                            <span class="progress-stat-label">Average quiz score</span>
+                            <strong id="average-score">—</strong>
+                        </div>
+                    </div>
+
+                    <div class="progress-topic-list">
+                        <article class="progress-topic-card">
+                            <div>
+                                <h2>Coding</h2>
+                                <p id="coding-progress-status">Not attempted yet</p>
+                            </div>
+                            <strong id="coding-progress-score">—</strong>
+                        </article>
+
+                        <article class="progress-topic-card">
+                            <div>
+                                <h2>Electricity</h2>
+                                <p id="electricity-progress-status">Not attempted yet</p>
+                            </div>
+                            <strong id="electricity-progress-score">—</strong>
+                        </article>
+
+                        <article class="progress-topic-card">
+                            <div>
+                                <h2>Math</h2>
+                                <p id="math-progress-status">Not attempted yet</p>
+                            </div>
+                            <strong id="math-progress-score">—</strong>
+                        </article>
+                    </div>
+
+                    <button id="progress-learn-button" class="primary-button" type="button">
+                        Continue learning →
+                    </button>
+                </section>
+            </div>
+
+         </main>
+
+         <!-- Footer-->
+        <footer class="site-footer">
+            <p>Learn at your own pace. Build confidence one concept at a time.</p>
+        </footer>
+    </body>
+</html>
