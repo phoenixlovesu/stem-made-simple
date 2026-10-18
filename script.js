@@ -655,6 +655,11 @@ function showQuizSummary() {
   const lesson = lessons[currentTopic];
   const questions = lesson.questions;
 
+  // display the final quiz score
+  document.querySelector("#final-score").textContent = score;
+  document.querySelector("#total-questions").textContent =
+  questions.length;
+
   // save the score for this topic
   saveQuizProgress();
 
